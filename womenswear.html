@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-fluid position-relative p-0">
+    <img src="{% static 'womens.webp' %}" class="w-100" style="height: 90vh; object-fit: cover;" alt="Mens Wear">
+
+    <!-- Centered Text -->
+    <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+        <h2 class="fw-bold display-4">Womens Wear on Rent</h2>
+    </div>
+</div>
+
+
+
+<!--  Section -->
+<div class="container py-5">
+  <!-- <h1 class="text-center display-5 mb-4">Womens Wear</h1> -->
+
+  <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap"></div>
+  <div class="breadcrumb">
+
+  </div>
+
+  <!-- Filter & Sort Section -->
+  <div class="top-bar">
+
+    <p><a href="{% url 'home' %}" class="text-decoration-none text-dark">Home</a> › <strong>Womens wear</strong></p>
+    <button class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
+                Filter Products
+              </button>
+    <div class="d-flex align-items-center">
+      <span class="me-2">Sort by:</span>
+      <select class="form-select" style="width: 150px;">
+        <option>All</option>
+        <option>Price: Low to High</option>
+        <option>Price: High to Low</option>
+        <option>Newest</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="row g-4">
+
+    <!-- Product 1 -->
+     {% for w in all_womenswear %}
+    <div class="col-md-4">
+      <div class="product-card">
+        <div class="product-image">
+          <a href="{% url 'greenlehenga' %}">
+            <img src="{{w.image.url}}" alt="Brown velvet bandi">
+        </div>
+        <div class="product-title">{{w.name}}</div>
+        <div class="brand">{{w.brand_name}}</div>
+        <div class="price-text">{{w.price}}</div></a>
+      </div>
+    </div>
+    {% endfor %}
+   
+
+  </div>
+</div>
+
+ <!-- Filter Sidebar (Bootstrap Offcanvas) -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="filterSidebar" aria-labelledby="filterSidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="filterSidebarLabel">Filter Products</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form>
+                <h6>Category</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter1">
+                    <label class="form-check-label" for="filter1">Wedding</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter2">
+                    <label class="form-check-label" for="filter2">Reception</label>
+                </div>
+
+                <hr>
+
+                <h6>Size</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="sizeM">
+                    <label class="form-check-label" for="sizeM">Medium</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="sizeL">
+                    <label class="form-check-label" for="sizeL">Large</label>
+                </div>
+
+                <hr>
+
+                <h6>Color</h6>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="colorWhite">
+                    <label class="form-check-label" for="colorWhite">White</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="colorBrown">
+                    <label class="form-check-label" for="colorBrown">Brown</label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

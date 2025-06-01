@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+ <!-- {% block stylecss %}
+  add css file address..
+  {% endblock stylecss %} -->
+{% block content %}
+
+
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .contact-section {
+      background-color: white;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-section h2 {
+      font-weight: 700;
+    }
+
+    .form-control {
+      border-radius: 0.5rem;
+    }
+
+    .social-icons a {
+      font-size: 1.4rem;
+      margin-right: 15px;
+      color: #343a40;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #0d6efd;
+    }
+
+    .newsletter-form input[type="email"] {
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .newsletter-form button {
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Contact Us Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="contact-section">
+      <div class="text-center mb-5">
+        <h2>Contact Us</h2>
+        <p class="text-muted">We’d love to hear from you! Reach out with any queries or feedback.</p>
+      </div>
+
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-md-6 mb-4">
+          <form>
+            
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required name="YOURNAME">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required name="EMAIL">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Subject" name="MESSAGE">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Right Side Info -->
+        <div class="col-md-6">
+          <!-- Social Media -->
+          <div class="mb-4">
+            <h5 class="fw-bold">Follow Us</h5>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="mb-4">
+            <h5 class="fw-bold">Newsletter</h5>
+            <p class="text-muted">Get updates on new collections, offers, and more.</p>
+            <form class="d-flex newsletter-form">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button class="btn btn-outline-primary" type="submit">Subscribe</button>
+            </form>
+          </div>
+
+          <!-- Address -->
+          <div class="mb-3">
+            <h5 class="fw-bold">Our Address</h5>
+            <p class="text-muted mb-1"><i class="fas fa-map-marker-alt me-2"></i>123, Fashion Street, Delhi, India</p>
+            <p class="text-muted mb-1"><i class="fas fa-phone me-2"></i>+91 9876543210</p>
+            <p class="text-muted"><i class="fas fa-envelope me-2"></i>support@outfitease.com</p>
+          </div>
+
+          <!-- Map -->
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14012.953396645733!2d77.209021!3d28.6139391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1b1c364b65%3A0xb94e50d5d625f0ed!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1715467890000" 
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

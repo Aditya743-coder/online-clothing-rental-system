@@ -1,0 +1,458 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- {% block stylecss %}
+  add css file address..
+  {% endblock stylecss %} -->
+{% block content %}
+
+<div class="container-fluid position-relative p-0">
+    <img src="{% static 'mens.jpg' %}" class="w-100" style="height: 90vh; object-fit: cover;" alt="Mens Wear">
+
+    <!-- Centered Text -->
+    <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+        <h2 class="fw-bold display-4">Mens Wear on Rent</h2>
+    </div>
+</div>
+
+
+
+<div class="container py-5">
+    <!-- <h1 class="mb-4 text-center">Mens Wear</h1> -->
+
+
+    <!-- Filter & Sort Section -->
+    <div class="top-bar">
+        <p><a href="{% url 'home' %}" class="text-decoration-none text-dark">Home</a> › <strong>Mens wear</strong></p>
+        <!-- <button class="btn btn-outline-dark">Filter Products</button> -->
+        <button class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#filterSidebar">
+            Filter Products
+        </button>
+
+        <div class="d-flex align-items-center">
+            <span class="me-2">Sort by:</span>
+            <select class="form-select" style="width: 150px;">
+                <option>All</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Product 1 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="#">
+                        <img src="{% static 'bandgalas/1.webp' %}" alt="Brown velvet bandi">
+                </div>
+                <div class="product-title">Brown velvet bandi</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,000.00</div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/2.webp' %}" alt="Cream Bandgala">
+                </div>
+                <div class="product-title">Cream Bandgala</div>
+                <div class="brand">Prima Czar</div>
+                <div class="price-text">From Rs. 2,200.00</div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/3.webp' %}" alt="White Bandhgala">
+                </div>
+                <div class="product-title">White Bandhgala</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/4.webp' %}" alt="White Bandhgala">
+                </div>
+                <div class="product-title">White Bandhgala</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/5.webp' %}" alt="Zip bandi">
+                </div>
+                <div class="product-title">Zip bandi</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/6.webp' %}" alt="Navy embroidered bandi">
+                </div>
+                <div class="product-title">Navy embroidered bandi</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/7.webp' %}" alt="Mustard bandi">
+                </div>
+                <div class="product-title">Mustard bandi</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,250.00</div>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/8.webp' %}" alt="Grey Satin bandi">
+                </div>
+                <div class="product-title">Grey Satin bandi</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,250.00</div>
+            </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/9.webp' %}" alt="Corduroy bandi">
+                </div>
+                <div class="product-title">Corduroy bandi</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/10.webp' %}" alt="Coffee coloured bandi">
+                </div>
+                <div class="product-title">Coffee coloured bandi</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/11.webp' %}" alt="Purple Bandhgala">
+                </div>
+                <div class="product-title">Purple Bandhgala</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/12.webp' %}" alt="Olive Bandhgala Set">
+                </div>
+                <div class="product-title">Olive Bandhgala Set</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/13.webp' %}" alt="Orange Bandhgala">
+                </div>
+                <div class="product-title">Orange Bandhgala</div>
+                <div class="brand">Prime Czar</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/14.webp' %}" alt="Purple Velvet Jacket">
+                </div>
+                <div class="product-title">Purple Velvet Jacket</div>
+                <div class="brand">Rahul Agasti</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'bandgalas/15.webp' %}" alt="Ivory Gold and Valvet Bandi">
+                </div>
+                <div class="product-title">Ivory Gold and Valvet Bandi</div>
+                <div class="brand">Parmar Man</div>
+                <div class="price-text">From Rs. 1,500.00</div>
+            </div>
+        </div>
+
+
+
+        <!-- Product 1 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.1.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Pink Brocade Sherwani</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.2.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Gold and Red Sherwani </div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.3.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Bottle Green Kurta </div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 1,800.00</div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.4.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Blue Textured Sherwani</div>
+                <div class="brand">The Suit Story</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.5.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Pale Olive Threadwork Sherwani</div>
+                <div class="brand">Sabyasachi</div>
+                <div class="price-text">From Rs. 9,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.6.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Cream Full Embroidered Sherwani With Dupatta</div>
+                <div class="brand">OutfitEase Exclusive</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.7.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Asymmetric Sherwani With Golden Dbhoti Pants</div>
+                <div class="brand">OutfitEase Exclusive</div>
+                <div class="price-text">From Rs. 5,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.8.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Ivory 4 Piece Sherwani set</div>
+                <div class="brand">OutfitEase</div>
+                <div class="price-text">From Rs. 9,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 9 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.9.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Blue Velvet Sherwani</div>
+                <div class="brand">Munni & Girija</div>
+                <div class="price-text">From Rs. 8,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 10 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.10.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Cream Embroidered Sherwani</div>
+                <div class="brand">OutfitEase</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 11 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.11.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Ivory threadwork sherwani set</div>
+                <div class="brand">OutfitEase Exclusive</div>
+                <div class="price-text">From Rs. 4,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 12 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.12.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Embroidered maroon kurtas set</div>
+                <div class="brand">OutfitEase Exclusive</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 13 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.13.webp' %}" alt="kurtas & sherwani">
+                </div>
+                <div class="product-title">Slate Grey Sherwani</div>
+                <div class="brand">OutfitEase Exclusive</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 14 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.14.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Maroon abd Gold kurtas set</div>
+                <div class="brand">OutfitEase Exclusive</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+        <!-- Product 15 -->
+        <div class="col-md-4">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{% static 'Kurtas & Sherwanis/k.15.webp' %}" alt="kurtas & sherwanis">
+                </div>
+                <div class="product-title">Maroon And Navy Kurtas set</div>
+                <div class="brand">OutfitEase Exclusive</div>
+                <div class="price-text">From Rs. 3,500.00</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Filter Sidebar (Bootstrap Offcanvas) -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="filterSidebar" aria-labelledby="filterSidebarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="filterSidebarLabel">Filter Products</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <h6>Category</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filter1">
+                <label class="form-check-label" for="filter1">Wedding</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="filter2">
+                <label class="form-check-label" for="filter2">Reception</label>
+            </div>
+
+            <hr>
+
+            <h6>Size</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="sizeM">
+                <label class="form-check-label" for="sizeM">Medium</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="sizeL">
+                <label class="form-check-label" for="sizeL">Large</label>
+            </div>
+
+            <hr>
+
+            <h6>Color</h6>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorWhite">
+                <label class="form-check-label" for="colorWhite">White</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="colorBrown">
+                <label class="form-check-label" for="colorBrown">Brown</label>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}

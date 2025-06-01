@@ -1,0 +1,360 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- {% block stylecss %}
+  add css file address..
+  {% endblock stylecss %} -->
+{% block content %}
+
+<!-- Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+    <!-- First Slide (Left Text) -->
+    <div class="carousel-item active" style="background-image: url('static/a.2.webp');">
+      <div class="left-caption text-white">
+        <h1>THE FUTURE OF YOUR WARDROBE</h1>
+        <div class="mt-4">
+          <a href="{% url 'womenswear' %}" class="btn btn-light btn-custom">Rent Womens Wear</a>
+          <a href="{% url 'menswear' %}" class="btn btn-light btn-custom">Rent Mens Wear</a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Slide (Center Text) -->
+    <div class="carousel-item" style="background-image: url('static/a.1.webp');">
+      <div class="center-caption text-white">
+        <h1>RENT DESIGNER OUTFITS</h1>
+        <div>
+          <a href="{% url 'womenswear' %}" class="btn btn-light btn-custom">Explore Womens</a>
+          <a href="{% url 'menswear' %}" class="btn btn-light btn-custom">Explore Mens</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+
+    <!-- Women's Wear -->
+    <div class="col-md-6 mb-4">
+      <a href="{% url 'womenswear' %}" class="zoom-container">
+        <img src="{% static 'a.3.webp' %}" alt="Women's Wear" class="img-fluid zoom-image rounded shadow-sm">
+      </a>
+    </div>
+
+    <!-- Men's Wear -->
+    <div class="col-md-6 mb-4">
+      <a href="{% url 'menswear' %}" class="zoom-container">
+        <img src="{% static 'a.4.webp' %}" alt="Men's Wear" class="img-fluid zoom-image rounded shadow-sm">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+
+<section class="py-5" style="background-color: #2c2e3e;">
+  <div class="container">
+    <div class="row text-center text-white gy-5 ">
+
+      <!-- Step 1 -->
+      <div class="col-md-4">
+        <div>
+          <i class="fa-solid fa-hand-point-up"></i>
+        </div>
+        <h5 class="mt-3 fw-bold">1. MAKE YOUR CHOICE</h5>
+        <p>Browse through our exclusive collection and pick an outfit to lease with ease.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-md-4">
+        <div>
+          <i class="fa-solid fa-ruler-vertical"></i>
+        </div>
+        <h5 class="mt-3 fw-bold">2. THE DREAM FIT</h5>
+        <p>Select your size, the preferred duration and the date of delivery.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-md-4">
+        <div>
+          <i class="fa-solid fa-vest-patches"></i>
+        </div>
+        <h5 class="mt-3 fw-bold">3. STYLE YOUR LOOK</h5>
+        <p>Amp up your game with accessories from our specially curated collection to complement your look.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-md-6">
+        <div>
+          <i class="fa-solid fa-door-open"></i>
+        </div>
+        <h5 class="mt-3 fw-bold">4. DELIVERY TO YOUR DOORSTEP</h5>
+        <p>Sit back and relax after check out as we custom fit the outfit to your measurements for a hassle free
+          experience.</p>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="col-md-6">
+        <div>
+          <i class="fa-solid fa-camera-retro"></i>
+        </div>
+        <h5 class="mt-3 fw-bold">5. LOOK PICTURE PERFECT</h5>
+        <p>Own your look and turn heads wherever you go. Don’t worry, the pick up is on us!</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Side -->
+      <div class="col-md-6 text-center">
+        <p class="text-uppercase small text-muted mb-2">New Arrivals</p>
+        <h1 class="display-4 fw-bold">The Latest Scoop</h1>
+        <p class="lead">Get Spring ready in the freshest looks of the season</p>
+        <a href="#" class="btn btn-dark px-4 py-2 my-3">Rent Now</a>
+
+        <div class="mt-4">
+          <img src="static/Silver Rectangular Patterned Blazer.webp" alt="Product" style="max-height: 200px;">
+          <h5 class="mt-3 fw-bold">Silver Rectangular Patterned Blazer</h5>
+          <p class="text-muted">Rs. 2,800.00</p>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-6">
+        <img src="static/a.5.webp" alt="Model" class="img-fluid rounded">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container my-5">
+  <div class="row g-3">
+    <!-- Left Column (Cocktail, Top Rated, Stylease, Party) -->
+    <div class="col-md-8">
+      <div class="row g-3">
+        <!-- Top Row -->
+        <div class="col-md-6">
+          <div class="category-box position-relative">
+            <img src="static/a.6.webp" style="object-fit: cover; width: 350px; height: 300px;" alt="Cocktail">
+            <h3 class="category-text position-absolute bottom-0 start-0 m-3 text-center text-white fw-bold">The
+              Cocktail
+              Collection</h3>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="category-box position-relative">
+            <img src="static/a.7.webp" style="object-fit: cover; width: 350px; height: 300px;" alt="Top Rated">
+            <h3 class="category-text position-absolute bottom-0 start-0 m-3 text-center text-white fw-bold">Top
+              Rated
+            </h3>
+          </div>
+        </div>
+        <!-- Bottom Row -->
+        <div class="col-md-6 position-relative">
+          <div class="category-box">
+            <img src="static/a.8.webp" style="object-fit: cover; width: 350px; height: 300px;" alt="Stylease Exclusive">
+            <h3 class="category-text position-absolute bottom-0 start-0 m-3 text-center text-white fw-bold">
+              OutfitEase
+              Exclusive</h3>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <div class="category-box">
+            <img src="static/a.9.webp" style="object-fit: cover; width: 350px; height: 300px;" alt="The Party Edit">
+            <h3 class="category-text position-absolute bottom-0 start-0 m-3 align-items-center text-white fw-bold">
+              The
+              Party Edit</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column (Menswear - Tall Image) -->
+    <div class="col-md-4 position-relative">
+      <div class="category-box h-500">
+        <img src="static/a.10.webp" style="object-fit: cover; width: 450px; height: 600px;" alt="Mens Wear">
+
+        <h3 class="category-text position-absolute bottom-0 start-0  m-3 align-items-center text-white fw-bold">Mens
+          Wear</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Side -->
+      <div class="col-md-6 text-center">
+        <p class="text-uppercase small text-muted mb-2">Trend alerts</p>
+        <h1 class="display-4 fw-bold">Derisk You Style Experiment</h1>
+        <p class="lead">Be any version of yourself without burning your pockets</p>
+        <a href="#" class="btn btn-dark px-4 py-2 my-3">Rent Now</a>
+
+        <div class="mt-4">
+          <img src="static/a.17.1.webp " alt="Product" style="max-height: 250px;">
+          <h5 class="mt-3 fw-bold">Silver Rectangular Patterned Blazer</h5>
+          <p class="text-muted">Rs. 4,500.00</p>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-6">
+        <img src="static/a.17.webp" alt="Model" class="img-fluid rounded">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div class="style-blog col-md-12">
+  <div class="style-text text-white  center-caption">
+
+    <h1>The OutfitEase Blog</h1>
+    <p>The latest in fashin from OutfitEase</p>
+    <a href="#" class="btn text-uppercase text-white" style="border: 2px solid rgb(253, 251, 251);">read now</a>
+  </div>
+</div>
+
+
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Side -->
+      <div class="col-md-6 text-center">
+        <p class="text-uppercase small text-muted mb-2">mens wear</p>
+        <h1 class="display-4 fw-bold">Why Should Girls Have All The Fun?</h1>
+        <p class="lead">For the dapper and uber stylish modern man</p>
+        <a href="{% url 'menswear' %}" class="btn btn-dark px-4 py-2 my-3">Rent Now</a>
+
+        <div class="mt-4">
+          <img src="static/Cremy full.webp" alt="Product" style="max-height: 200px;">
+          <h5 class="mt-3 fw-bold">Cream Fully Embroidered Sherwani With Dupatta</h5>
+          <p class="text-muted">Rs. 6,500.00</p>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-6">
+        <img src="static/a.11.webp" alt="Model" class="img-fluid ">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="row align-items-center">
+
+    <!-- Carousel Left -->
+    <div class="col-md-9">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="static/a.12.webp" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="static/a.13.webp" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="static/a.14.webp" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="static/a.15.webp" class="d-block w-100 h-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="static/a.16.webp" class="d-block w-100 h-100" alt="...">
+        </div>
+
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+    <!-- Text Right -->
+    <div class="col-md-3 text-center">
+      <h6 class="text-uppercase text-muted">Designers</h6>
+      <h2 class="fw-bold">Quality Is A Habit</h2>
+      <p>Every outfit we onboard goes through a rigorous screening process to make sure that you get nothing but the
+        best craftsmanship from the most innovative and sought after designers.</p>
+      <a href="#" class="btn btn-dark">View ALL Designer</a>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container my-5">
+  <h1 class="text-center mb-5">Join The Revolution</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <p>I wore this stunning gold mirror lehenga for my best friend's destination wedding and I absolutely loved
+        the
+        attention that I grabbed that day! The fittimg was perfect too Thank you Team Stylease for making me look so
+        gorgeous in my Insta pictures!</p>
+      <h6 class="text-center">Shreshtha. H</h6>
+    </div>
+    <div class="col-md-4">
+      <p>This lehenga came in a packaging that was spot-on. The fittings were absolutely perfect too and I got a lot
+        of compliments on this style. Absolutely love the collection, theres's always something for every occasion.
+        Thank you team Stylease for making sure I look my best this wedding season!</p>
+      <h6 class="text-center">Juhi. S</h6>
+    </div>
+    <div class="col-md-4">
+      <p>We loved our experience with The Stylease. We decided to attend a friend's sangeet at the last minute and
+        we
+        didn't want to spend a bomb on something that we weren't going to use. The Stylease went out of their way
+        and
+        helped us look our best for the event.</p>
+      <h6 class="text-center line">Avantika. G</h6>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock content %}

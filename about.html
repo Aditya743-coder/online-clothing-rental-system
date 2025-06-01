@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <a class="navbar-brand" href="#">OutfitEase</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Womens Wear</a>
+            </li>
+          <li class="nav-item"><a class="nav-link" href="#">Mens Wear</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Rent For A Cause</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  -->
+
+
+
+    <div class="container">
+       <div class="col-md-12 justify-content-center text-center ">
+        <img src="{% static 'rent for a cause.webp' %}" alt="Rent for a cause" class="img-fluid" style="width: 750px; height: auto; margin-top: 80px;">
+    
+
+        <h3 class="my-5">About Rent For A Cause</h3>
+        <p>We, at The Stylease, have always been firm believers of fashion for all. But somewhere in the midst of bringing luxury designers to every girl next door, we forget that there are those in the world who don’t even have the luxury of comfortable clothing.</p>
+        <p>So here we are, pushing the boundaries to believe in clothing for all; and we’d like your support in our initiative to help those in need to be able to lead a deservedly comfortable life.</p>
+        <p>Browse through our display of an exquisite collection of outfits available to rent for a cause as the proceeds from these outfits will be shared with our NGO partners.</p>
+
+        <img src="{% static 'how works.webp' %}" alt="How it works" class="img-fluid" style="width: 750px; height: auto; margin-top: 80px;">
+    </div>
+    </div>
+    
+
+    
+
+     <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  {% endblock content %}
